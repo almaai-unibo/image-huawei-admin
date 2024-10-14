@@ -1,0 +1,4 @@
+- Build: `docker build . -t gciattounibo/huawei-admin`
+- Create local file named `password` with the password for `USER` on Huawei machines
+- Assumption is that the local user has a private key in `$HOME/.ssh/id_rsa`
+- Run: `docker run --rm -it -e USER=gciatto -v `pwd`/.password:/secrets/password:ro -v $HOME/.ssh/id_rsa:/root/.ssh/id_rsa:ro gciattounibo/huawei-admin`
