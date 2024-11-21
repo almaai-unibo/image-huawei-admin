@@ -9,7 +9,20 @@ You can launch an arbitrary Ansible command using the shell function `ansible_sh
 1. the Ansible target (by default is 'all'. You can check the available targets in `huawei.ini` file
 2. the shell command to be executed
 
+```bash
+ansible_shell stairwai 'docker volume ls'
+```
+
+
 ### Create a user volume
 You can create a user volume using the shell function `create_user_volume`, which takes two parameters:
 1. the name of the user that is using the volume
 2. the Ansible target, default value is 'stairwai'.
+
+```bash
+create_user_volume 'martina.baiardi'
+```
+or 
+```bash
+create_user_volume 'martina.baiardi' stairwai
+```
